@@ -5,13 +5,29 @@ Bonus: Make notes semi random, so that they recreate popular progressions OR hav
 Bonus: Provide an option for different kinds of sounds
 Bonus: Have the circles shrink and grow based on its beat, peak size on beat, a dot when at half of beat*/
 
+var width = canvas.width;
+var height = canvas.height;
 
-var canvas = document.getElementById('circle');
-if (canvas.getContext) {
-  var ctx = canvas.getContext('2d');
+var red = Math.floor(Math.random() * 256)
+var green = Math.floor(Math.random() * 256)
+var blue = Math.floor(Math.random() * 256)
+
+var xPos = Math.random() * width;
+var yPos = Math.random() * width;
+var circleRadius = Math.random() * 50;
+
+function draw () {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var circle = canvas.getContext('2d');
     //drawing code here
-} else {
-  //canvas un-supported code here
-}
+    circle.arc(xPos, yPos, circleRadius, 0, 2 * Math.PI);
+    circle.fillStyle = 'rgba(' + red + ', ' + green + ', ' + blue + ', 0.5)';
+    circle.fill()
+  };
+};
 
-canvas.getContext('2d');
+draw();
+
+
+//    ctx.moveTo(Math.random * width, Math.random * height);
