@@ -3,6 +3,8 @@
 
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
     <link rel='stylesheet' href='style.css'>
     <script src='https://code.jquery.com/jquery-2.1.0.js'></script>
 
@@ -10,9 +12,22 @@
   </head>
 
   <body>
-    <canvas id="c" width="800" height="600">
-      Not supported on your browser!
-    </canvas>
+    <div class='container'>
+      <div class='row'>
+        <div class='12 columns'>
+          <canvas id="c" width="800" height="600">
+            Not supported on your browser!
+          </canvas>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='12 columns'>
+          <div id='button'>
+            <input type='button' value='Clear'>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script src='script.js'></script>
