@@ -1,23 +1,6 @@
-/* Concept: On click, produce a random note that will repeat at a set interval of a random length.
-Click will also produce a random circle with a random size and random colour.
-Sounds and circles should be able to overlap.
-Bonus: Make notes semi random, so that they recreate popular progressions OR have doubleclick click produce four notes
-Bonus: Provide an option for different kinds of sounds
-Bonus: Have the circles shrink and grow based on its beat, peak size on beat, a dot when at half of beat*/
-
 var canvas = document.getElementById('c');
 var width = canvas.width;
 var height = canvas.height;
-
-/* DISABLED BECAUSE IT DOESN'T SEEM TO WORK
-//  Obtain mouse location
-function getClickPosition(e) {
-  var xPos = e.clientX;
-  var yPos = e.clientY;
-};
-canvas.addEventListener('click', getClickPosition, true);
-*/
-
 var context = canvas.getContext('2d');
 
 // Draw circle function
@@ -47,6 +30,7 @@ document.getElementById('button').addEventListener('click', function() {
   },
 true);
 
-// draw();
+/*Activate the below for fully automatic painting*/
 setInterval(draw, 500);
+/*Activate the below for prompted automatic painting*/
 // canvas.addEventListener('click', draw, false);
