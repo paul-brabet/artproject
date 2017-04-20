@@ -48,5 +48,5 @@ document.getElementById('button').addEventListener('click', function() {
 true);
 
 // draw();
-setInterval(draw, 200);
+setInterval(draw, 500);
 // canvas.addEventListener('click', draw, false);
